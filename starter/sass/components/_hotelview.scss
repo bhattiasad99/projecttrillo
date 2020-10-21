@@ -1,0 +1,71 @@
+/*----------------------- gallery -----------------------*/
+.gallery {
+    display: flex;
+
+    &__photo {
+        width: 100%;
+        display: block;
+    }
+}
+
+/*----------------------- overview -----------------------*/
+.overview {
+    background-color: var(--colorGreyLight1);
+    display: flex;
+    justify-content: space-between;
+    border-bottom: var(--borderbot);
+    align-items: center;
+
+    &__heading {
+        font-size: 2.25rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 1.5rem 3rem;
+    }
+
+    &__stars {
+        margin-right: auto;
+        display: flex;
+    }
+
+    &__icon {
+        &--location {
+            margin-right: .5rem;
+        }
+
+        &--star,&--location {
+            width: 1.75rem;
+            height: 1.75rem;
+            fill: var(--colorPrimary);
+        }
+    }
+
+    &__location {
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__rating {
+        background-color: var(--colorPrimary);
+        margin-left: 3rem;
+        color: var(--colorWhite);
+        align-self: stretch;
+        padding: 0 2.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &--average {
+            font-size: 2.25rem;
+            font-weight: 300;
+        }
+
+        &--count {  
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+    }
+}

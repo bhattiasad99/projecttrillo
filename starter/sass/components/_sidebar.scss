@@ -1,0 +1,72 @@
+/*----------------------- side navigation -----------------------*/
+
+.sideNavigationBar {
+    font-size: 1.43rem;
+    margin-top: 3.5rem;
+    &__item {
+        list-style: none;
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+
+    }
+
+    &__item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--colorPrimary);
+        transform: scaleY(0);
+        transition: transform 0.2s,
+                    width 0.4s cubic-bezier(1,-0.02,0,.99) 0.2s,
+                    background-color 0.1s;
+    }
+
+    &__item:hover::before,
+    &__item--active::before {
+        transform: scaleY(1);
+        width: 100%;
+    }
+
+    &__item:active::before {
+        background-color: var(--colorPrimaryLight);
+    }
+
+    &__link:link,
+    &__link:visited {
+        color: var(--colorGreyLight1);
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        padding: 1.5rem 3rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+    }
+
+    &__text {
+        //empty
+    }
+
+    &__icon {
+        width: 1.75rem;
+        height: 1.75rem;
+        margin-right: 2rem;
+        fill: currentColor;
+    }
+}
+
+/*----------------------- legal -----------------------*/
+
+.legal {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 2.5rem;
+    color: var(--colorGreyLight4)
+}

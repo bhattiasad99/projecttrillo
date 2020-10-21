@@ -1,0 +1,17 @@
+/*----------------------- cta -----------------------*/
+.cta {
+    padding: 3.5rem 0rem;
+    text-align: center;
+
+    //edits
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__bookNow {
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 300;
+        margin-bottom: 2.5rem;
+    }
+}
